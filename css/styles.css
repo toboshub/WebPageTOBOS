@@ -1,0 +1,58 @@
+/* Tobos Propiedad Intelectual — estilos base
+   Colores de marca:
+   --azul:  #2B2F8F  (TOBOS)
+   --rojo:  #A8433A  (Propiedad Intelectual)
+   --tinta: #1C1D33  (texto)
+   Los estilos de cada sección están dentro de cada página (atributo style). */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  color: #1C1D33;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: #2B2F8F; }
+a:hover { color: #A8433A; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #A8433A;
+  outline-offset: 2px;
+}
+
+/* Botones con fondo: mantener el color del texto al pasar el mouse */
+a[style*="background: #2B2F8F"]:hover,
+a[style*="background: #A8433A"]:hover,
+a[style*="background: #1E7A4A"]:hover { color: #FFFFFF; filter: brightness(1.12); }
+a[style*="background: #FFFFFF; color: #2B2F8F"]:hover { color: #A8433A; }
+button[type="submit"]:hover { filter: brightness(1.12); }
+
+/* Enlace para saltar al contenido (accesibilidad) */
+.skip-link {
+  position: absolute; left: 16px; top: -60px;
+  background: #2B2F8F; color: #FFFFFF; padding: 10px 16px; z-index: 100;
+  border-radius: 4px; text-decoration: none; font-weight: 700;
+}
+.skip-link:focus { top: 12px; color: #FFFFFF; }
+
+/* Encabezado fijo arriba al hacer scroll */
+.site-header { position: sticky; top: 0; z-index: 50; }
+
+/* Celulares */
+@media (max-width: 640px) {
+  .site-header img { height: 44px !important; width: auto !important; }
+  .site-header nav { gap: 2px 18px !important; font-size: 15px !important; }
+  .site-header { position: static; }
+  section > div { padding-left: 18px !important; padding-right: 18px !important; }
+  form { padding: 24px !important; }
+}

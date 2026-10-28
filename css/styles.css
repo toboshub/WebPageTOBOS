@@ -56,3 +56,6 @@ button[type="submit"]:hover { filter: brightness(1.12); }
   section > div { padding-left: 18px !important; padding-right: 18px !important; }
   form { padding: 24px !important; }
 }
+
+/* Párrafos y textos de columnas justificados */
+main p, main li, main a > span + span + span { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
